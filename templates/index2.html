@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index idea 2 Nav Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><!-- Find out specfically what these imports are doing -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link href="/Css/style2.css" rel="stylesheet" />
+  </head>
+  <body>
+    <button onclick="ExpandMenu()" class="burger material-symbols-outlined">menu</button><!--On click will expand the nav bar in social media-->
+    <nav class="navbar">
+      <div class="search"><!--Siv's search feature-->
+        <span class="material-symbols-outlined"> search </span>
+        <input placeholder="placeholder"/> <!--Find valid name for this-->
+      </div>
+      <nav>
+        <button class="material-symbols-outlined">help</button><!--Logo's need this wording can't be changed, learn the naming for certain logo/symbols-->
+        <button class="material-symbols-outlined">settings</button><!--To turn the webpage to night mode or light more, prolly changing this to a toggle-->
+        <button class="material-symbols-outlined">apps</button>
+      </nav>
+      <nav>
+        <ol>
+            <li><a href=""></a>Destionation</li><!--Move to right of search -->
+            <li><a href=""></a>Tour</li>
+            <li><a href=""></a>Contact</li>
+        </ol>
+      </nav>
+    </nav>
+    <script type="text/javascript">
+      const ExpandMenu = () => document.body.classList.toggle("open");
+    </script>
+  </body>
+</html>
