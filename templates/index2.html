@@ -14,25 +14,38 @@
   <body>
     <button onclick="ExpandMenu()" class="burger material-symbols-outlined">menu</button><!--On click will expand the nav bar in social media-->
     <nav class="navbar">
+      <h1>Name of webpage</h1>
       <div class="search"><!--Siv's search feature-->
         <span class="material-symbols-outlined"> search </span>
         <input placeholder="placeholder"/> <!--Find valid name for this-->
       </div>
+      <ol>
+        <li><a href=""></a>Destionation</li><!--Move to right of search -->
+        <li><a href=""></a>Tour</li>
+        <li><a href=""></a>Contact</li>
+      </ol>
       <nav>
         <button class="material-symbols-outlined">help</button><!--Logo's need this wording can't be changed, learn the naming for certain logo/symbols-->
         <button class="material-symbols-outlined">settings</button><!--To turn the webpage to night mode or light more, prolly changing this to a toggle-->
         <button class="material-symbols-outlined">apps</button>
       </nav>
-      <nav>
-        <ol>
-            <li><a href=""></a>Destionation</li><!--Move to right of search -->
-            <li><a href=""></a>Tour</li>
-            <li><a href=""></a>Contact</li>
-        </ol>
-      </nav>
     </nav>
+    <div class="mainContainer">
+      <div class="row">
+        <div class="card-tours">
+          <img src="/images/Berlin_Bridge.jpg">
+        </div>
+        <div class="card-tours">
+          <img src="/images/Berlin_Bridge.jpg">
+        </div>
+      </div>
+    </div>
+    <footer>
+      
+    </footer>
     <script type="text/javascript">
       const ExpandMenu = () => document.body.classList.toggle("open");
     </script>
+    
   </body>
 </html>
