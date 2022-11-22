@@ -25,8 +25,18 @@
     width: 40%;
     height: 40%;
   }
-  .card-destination{
-
+  .card_user{
+    height: 80%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .card_user img{
+    border-radius: 2em;
+  }
+  .card_user input{
+    width: 80%;
   }
   .extendble {
     position: fixed;
