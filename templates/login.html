@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="/Css/style2.css" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="/Css/style2.css" rel="stylesheet" />
+</head>
 <body>
-    <button onclick="ExpandMenu()" class="extendble">menu</button><!--On click will expand the nav bar in social media-->
-    <!--Nav search function-->
-    <nav class="navbar navbar-expand-sm bg-white navbar-white">
-      <div class="search"><!--Siv's search feature-->
-        <input placeholder="placeholder"/> <!--Find valid name for this-->
-      </div>
-      <!--Nav Links-->
-        <div class="container-fluid">
-          <ol class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#"></a>
-            </li>
-          </ol>
-        </div>
-    </nav>
+  <div id="sidebar" class="bg-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"><i class="bi bi-person"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">at least the nav bar is done so just did the side bar real quick</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">style it how you want go nuts</a>
+      </li>
+    </ul>
+  </div>
+<!--Nav search function-->
+<nav class="navbar navbar-expand-sm bg-white navbar-white" style="z-index: 1;">
+  <div class="search"><!--Siv's search feature-->
+    <input placeholder="Search"/> <!--Find valid name for this-->
+    <i class="bi bi-search" style="position:relative ; left:-7.1cm; cursor: pointer;"></i>
+  </div>
+<!--Nav Links-->
+  <div class="container-fluid">
+    <div class="container-fluid">
+		  <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index2.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tours</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About us</a>
+        </li>
+		  </ul>
+		</div>
+</nav>
+<button onclick="ExpandMenu()" class="extendble"><i class="bi bi-list"></i></button><!--On click will expand the nav bar in social media-->
     <div class="mainContainer">
         <div class="card_user">
               <img src="/images/user.png">
