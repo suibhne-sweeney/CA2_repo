@@ -1,76 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index idea 2 Nav Bar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="/Css/style2.css" rel="stylesheet" />
-  </head>
-  <body>
-    <button onclick="ExpandMenu()" class="extendble">menu</button><!--On click will expand the nav bar in social media-->
-    <!--Nav search function-->
-    <nav class="navbar navbar-expand-sm bg-white navbar-white">
-      <div class="search"><!--Siv's search feature-->
-        <input placeholder="placeholder"/> <!--Find valid name for this-->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index idea 2 Nav Bar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="/Css/style2.css" rel="stylesheet" />
+</head>
+<body>
+<button onclick="ExpandMenu()" class="extendble"><i class="bi bi-list"></i></button><!--On click will expand the nav bar in social media-->
+<!--Nav search function-->
+<nav class="navbar navbar-expand-sm bg-white navbar-white">
+  <div class="search"><!--Siv's search feature-->
+    <input placeholder="placeholder"/> <!--Find valid name for this-->
+  </div>
+<!--Nav Links-->
+  <div class="container-fluid">
+    <ol class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Brand</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">About us</a>
+      </li>
+    </ol>
+  </div>
+</nav>
+<!--Main content of information-->
+<div class="mainContainer">
+
+  <div class="row align-items-start">
+<!--Start of alignment of colunms-->
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
       </div>
-      <!--Nav Links-->
-        <div class="container-fluid">
-          <ol class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Brand</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">About us</a>
-            </li>
-          </ol>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+  </div>
+<!--Middle alignment of colunms-->
+  <div class="row align-items-center">
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+  </div>
+<!--End alignment of colunms-->
+  <div class="row align-items-end">
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+  </div>
+  <div class="subHeading">
+    <p>Source of information here</p>
+    <p>along with an image I imagine suggestions for what you think this section should be?</p>
+    <h1>Could highlight each tour/destination with this section?</h1>
+  </div>
+  <div class="row align-items-start">
+<!--Start of alignment of colunms-->
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+      <div class="col">
+        <img src="/images/Berlin_Bridge.jpg">
+        <p>Descriptions of location here</p>
+      </div>
+  </div>
+<!--Middle alignment of colunms-->
+    <div class="row align-items-center">
+        <div class="col">
+          <img src="/images/Berlin_Bridge.jpg">
+          <p>Descriptions of location here</p>
         </div>
-    </nav>
-    <!--Main content of information-->
-    <div class="mainContainer">
-      
-        <div class="row align-items-start">
-          <!--Start of alignment of colunms-->
-          <div class="col">
-            <img src="/images/Berlin_Bridge.jpg">
-            <p>Descriptions of location here</p>
-          </div>
-          <div class="col">
-            <img src="/images/Berlin_Bridge.jpg">
-            <p>Descriptions of location here</p>
-          </div>
+        <div class="col">
+          <img src="/images/Berlin_Bridge.jpg">
+          <p>Descriptions of location here</p>
         </div>
-        <!--Middle alignment of colunms-->
-        <div class="row align-items-center">
-          <div class="col">
-            <img src="/images/Berlin_Bridge.jpg">
-            <p>Descriptions of location here</p>
-          </div>
-          <div class="col">
-            <img src="/images/Berlin_Bridge.jpg">
-            <p>Descriptions of location here</p>
-          </div>
-        </div>
-        <!--End alignment of colunms-->
-        <div class="row align-items-end">
-          <div class="col">
-            <img src="/images/Berlin_Bridge.jpg">
-            <p>Descriptions of location here</p>
-          </div>
-          <div class="col">
-            <img src="/images/Berlin_Bridge.jpg">
-            <p>Descriptions of location here</p>
-          </div>
-        <div class="subHeading">
-          
+        <div class="col">
+          <img src="/images/Berlin_Bridge.jpg">
+          <p>Descriptions of location here</p>
         </div>
     </div>
-    <!--End of the main content Div-->
+<!--End alignment of colunms-->
+    <div class="row align-items-end">
+        <div class="col">
+          <img src="/images/Berlin_Bridge.jpg">
+          <p>Descriptions of location here</p>
+        </div>
+        <div class="col">
+          <img src="/images/Berlin_Bridge.jpg">
+          <p>Descriptions of location here</p>
+        </div>
+        <div class="col">
+          <img src="/images/Berlin_Bridge.jpg">
+          <p>Descriptions of location here</p>
+        </div>
     </div>
+    <div class="subHeading">
+      <p>Source of information here</p>
+      <p>along with an image I imagine suggestions for what you think this section should be?</p>
+      <h1>Could highlight each tour/destination with this section?</h1>
+    </div>
+    <div class="row align-items-start">
+      <!--Start of alignment of colunms-->
+            <div class="col">
+              <img src="/images/Berlin_Bridge.jpg">
+              <p>Descriptions of location here</p>
+            </div>
+            <div class="col">
+              <img src="/images/Berlin_Bridge.jpg">
+              <p>Descriptions of location here</p>
+            </div>
+            <div class="col">
+              <img src="/images/Berlin_Bridge.jpg">
+              <p>Descriptions of location here</p>
+            </div>
+        </div>
+      <!--Middle alignment of colunms-->
+          <div class="row align-items-center">
+              <div class="col">
+                <img src="/images/Berlin_Bridge.jpg">
+                <p>Descriptions of location here</p>
+              </div>
+              <div class="col">
+                <img src="/images/Berlin_Bridge.jpg">
+                <p>Descriptions of location here</p>
+              </div>
+              <div class="col">
+                <img src="/images/Berlin_Bridge.jpg">
+                <p>Descriptions of location here</p>
+              </div>
+          </div>
+      <!--End alignment of colunms-->
+          <div class="row align-items-end">
+              <div class="col">
+                <img src="/images/Berlin_Bridge.jpg">
+                <p>Descriptions of location here</p>
+              </div>
+              <div class="col">
+                <img src="/images/Berlin_Bridge.jpg">
+                <p>Descriptions of location here</p>
+              </div>
+              <div class="col">
+                <img src="/images/Berlin_Bridge.jpg">
+                <p>Descriptions of location here</p>
+              </div>
+          </div>
+<!--End of the main content Div-->
+</div>
     <!--Links and icons-->
     <footer>
       

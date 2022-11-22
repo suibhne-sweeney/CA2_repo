@@ -3,14 +3,17 @@
     background: #e6edf2;
     font-family: "Euclid Circular A";
     padding: 70px;
+    margin: 0%;
     
   }
   .mainContainer {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top: 0.5em;
     margin-top: 1em;
-    max-width: 70%;
-    max-height: 70%;
-    margin: auto;
-    display: flex;
+    padding-left: 2.5em;
+    display:block;/*Children are block's unless displayed differently*/
     border-radius: 0.2rem;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, .6);/*Using rgba in order to have optincy while not effecting the content on the div itself*/
@@ -20,6 +23,13 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+  }
+  .subHeading{
+    width: 100%;
+    height: 50%;
+    background: #c5c6c7;
+    margin-top: 10px;
+    margin-bottom: 1em;
   }
   .card-tours{
     width: 40%;
@@ -44,10 +54,13 @@
     justify-content: center;
     width: 72px;
     border-style: none;
+    top: 1.4em;
+    left: 0;
+    z-index: 1;/*If you discover a better way to fix this im all ears, but if you remove this the button will go god knows where*/
+    background: #ffffff;
   }
   
   .navbar {
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -60,6 +73,7 @@
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
   }
   .navbar ol {
+    margin-left: 150px;
     list-style-type: none;/*Takes away the list style which was o circles doesnt replace them with anything*/
     display: flex;
     
@@ -130,7 +144,7 @@
   }
   
   .search {
-    margin: 0 auto;
+    margin: 50px 50px 50px 500px;
     position: relative;
     color: #888989;
   }
