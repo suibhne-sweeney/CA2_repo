@@ -1,8 +1,9 @@
-
+  *{
+    font-family: sans-serif
+  }
   body {
     background: #e6edf2;
     font-family: "Euclid Circular A";
-    padding: 70px;
     margin: 0%;
     
   }
@@ -97,6 +98,65 @@
     opacity: 1;
     visibility: visible;
     translate: 0 0;
+  }
+  #sidebar{
+    transition: 500ms;
+    position: fixed;
+    height: 100%;
+    width: 10em;
+    left: -10em;
+    padding-top: 50px;
+  }
+  #sidebar ul{
+    margin-left: 10px;
+  }
+  
+  #sidebar.active{
+    left: 0;
+  }
+  #containerslide{
+    overflow: hidden;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 0;
+  }
+  #containerslide h1{
+    position: absolute;
+    left: 24%;
+    top: 2em;
+    color: #fff;
+    font-size: 120px;
+    z-index: 1;
+    font-weight: 600;
+
+  }
+  #slideshow{
+    display: flex;
+    transition: 2s;
+  }
+  #slideshow img{
+    width:120cm ; 
+    height:31.6cm;
+    position: relative;
+    bottom: 4cm;
+  }
+  #containerslide a{
+    position: absolute;
+    top: 16em;
+    left: 40%;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    z-index: 1;
+  }
+  #containerslide a:hover{
+    color: rgb(27, 179, 179);
+    border: 2px solid #fff;
   }
   
   @media (width >= 500px) {
@@ -202,18 +262,3 @@
     margin-left: 8px;
   }
 
-#sidebar{
-  transition: 500ms;
-  position: fixed;
-  height: 100%;
-  width: 10em;
-  left: -10em;
-  padding-top: 50px;
-}
-#sidebar ul{
-  margin-left: 10px;
-}
-
-#sidebar.active{
-  left: 0;
-}
