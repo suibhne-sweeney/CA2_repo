@@ -5,10 +5,13 @@
     background: #e6edf2;
     font-family: "Euclid Circular A";
     margin: 0%;
+    height: 100%;
+    width: 100%;
     
   }
   .mainContainer {
     max-width: 80%;
+    margin-top: 5em;
     margin-left: auto;
     margin-right:auto;
     display:block;/*Children are block's unless displayed differently*/
@@ -39,13 +42,37 @@
     width: 40%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     
   }
-  .card_user img{
+  .card_img{
     border-radius: 2em;
+    justify-content: center;
+    
+  }
+  .card_img .btn {
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .7;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
   }
   .card_user input{
     width: 80%;
+  }
+  .card_user button{
+    height: 30px;
+    width: 40%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
   }
   .extendble {
     position: fixed;
@@ -105,10 +132,12 @@
     height: 100%;
     width: 10em;
     left: -10em;
-    padding-top: 50px;
+    padding-top: 5em;
+    background: #ffffff;
   }
   #sidebar ul{
     margin-left: 10px;
+    
   }
   
   #sidebar.active{
@@ -158,7 +187,35 @@
     color: rgb(27, 179, 179);
     border: 2px solid #fff;
   }
-  
+  #slideshow_bg {
+    width: 100%;
+    height: 100%vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: slideBg 20s linear infinite;
+    animation-timing-function: ease-in-out;
+    background-image: url(/images/Tokyo.jpg);
+  }
+
+  @keyframes slideBg{
+  0% {
+    background-image: url(/images/Tokyo.jpg);
+  }
+  25% {
+    background-image: url(/images/lima_plaza.jpg)
+  }
+  50% {
+    background-image: url(/images/Berlin_Bridge.jpg)
+  }
+  75% {
+    background-image: url(/images/Berlin_Plaza.jpg)
+  }
+  100% {
+    background-image: url(/images/lima_moutain.jpg)
+  }
+}
   @media (width >= 500px) {
     .navbar {
       translate: 0 0;
