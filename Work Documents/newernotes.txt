@@ -11,16 +11,9 @@ jakes stuff
 - cart page: must have same
 
 jakes dumb fuck city pics
-- luxemburg: https://www.youtube.com/watch?v=Xn8vI6WPIKU
-- remove copenhagen
-- remove reykjavik
-- new york get vids 
-- london get vids 
-- rome get vids 
-- rio get vids 
-- dublin get vids https://www.youtube.com/watch?v=FXMWnZZzMFU
-- paris
-- singapore
+9 cities * 1
+tours_list.html will have 4-6 options
+tours_detail only needs one desgin 
 
 sivs stuff
 - account page: DONT TOUCH
