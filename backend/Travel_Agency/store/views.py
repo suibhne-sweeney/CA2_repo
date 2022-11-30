@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView, CreateView, DeleteView, DetailView
 from django.urls import reverse_lazy
-from .models import Location
+from .models import Package
 # Create your views here.
 
-class LocationListView(ListView):
-    model = Location
-    template_name = "index.html"
-    context_object_name = "location"
+class PackageListView(ListView):
+    model = Package
+    template_name = "shop/index.html"
+    context_object_name = "packages"

@@ -1,29 +1,22 @@
 from django.db import models
 from django.urls import reverse
+import uuid
 # Create your models here.
 
-class Hotel(models.Model):
-    name = models.CharField(max_length=100)
+class Package(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    category = models.CharField(max_length=100, blank=True, null=True)
+    country = models.CharField(max_length=100, blank=True, null=True)
+    city = models.CharField(max_length=100, blank=True, null=True)
+    hotel = models.CharField(max_length=100, blank=True, null=True)
+    tour = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField()
     image = models.ImageField(upload_to="locations")
-    star_rate = models.PositiveIntegerField()
-
+    
     def __str__(self):
-        return self.name
+        return self.country
 
 
-class Location(models.Model):
-    country = models.CharField(max_length=100)
-    city = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField(upload_to="locations")
-
-    def __str__(self):
-        return self.name
-
-class LocationHotel(models.Model):
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
 
 
 

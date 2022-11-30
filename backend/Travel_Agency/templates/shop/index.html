@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="{% static 'CSS/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+<!--Main content of information-->
+{% block content %}
+<div id="containerslide">
+  <h1>Ready To Travel?</h1>
+  <div id="slideshow">
+      <img src="{% static 'images/Tokyo.jpg' %}" alt="">
+      <img src="{% static 'images/Berlin.jpg' %}" alt="">
+      <img src="{% static 'images/Venice.jpg' %}" alt="" >
+  </div>
+</div>
+<div class="mainContainer">
+  <div class="subHeading">
+    <div id="slideshow_bg">
+      <h1 class="subtitle">Destinations</h1>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      {% for package in packages %}
+      {% if package.category == "Destination" %}
+      <div class="col-4 my-3">
+        <div class="card">
+          <div class="card-body">
+            <h2>{{package.country}}</h2>
+            <img class=" w-100" style="height: 6cm;" src="{{package.image.url}}">
+            <h2>{{package.city}}</h2>
+            <h4>{{package.hotel}}</h4>
+            <p>{{package.description}}</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="subHeading">
+    <div id="slideshow_bg">
+      <h1 class="subtitle">Tours</h1>
+    </div>
+  </div>
+  <div class="container-fluid">
+    {% for package in packages %}
+      {% if package.category == "Tour" %}
+      <div class="col-4 my-3">
+        <div class="card">
+          <div class="card-body">
+            <h2>{{package.country}}</h2>
+            <img class=" w-100" style="height: 6cm;" src="{{package.image.url}}">
+            <h2>{{package.tour}}</h2>
+            <p>{{package.description}}</p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+  </div>
+
+<!--End of the main content Div-->
+</div>
+    <!--Links and icons-->
+    <footer>
+      <h1>suggestions for what to add</h1>
+      <p> just some text to see the sizing of the box</p>
+    </footer>
+  </body>
+  <script src="{% static 'JS/index.js' %}"></script>
+  {% endblock content %}
+</html>
