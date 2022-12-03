@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -19,10 +20,10 @@
         <div class="card_user">
             <div class="card_img">
                 <img src="/images/user.png">
-                <button class="btn"><i class="bi bi-plus"></i></button>
             </div>
         <form>
-            {{form.as_p}}
+            {% csrf_token %}
+            {{ form|crispy }}
             <button onclick="">Login</button>
         </form>
         </div>

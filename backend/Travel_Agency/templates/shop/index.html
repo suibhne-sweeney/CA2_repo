@@ -30,20 +30,17 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      {% for package in packages %}
-      {% if package.category == "Destination" %}
+      {% for destination in destinations %}
       <div class="col-4 my-3">
         <div class="card">
           <div class="card-body">
-            <h2>{{package.country}}</h2>
-            <img class=" w-100" style="height: 6cm;" src="{{package.image.url}}">
-            <h2>{{package.city}}</h2>
-            <h4>{{package.hotel}}</h4>
-            <p>{{package.description}}</p>
+            <h2>{{destination.country}}</h2>
+            <a href="{% url 'store:details' destination.pk %}"><img class=" w-100" style="height: 6cm;" src="{{destination.image.url}}"></a>
+            <h2>{{destination.city}}</h2>
+            <p>{{destination.description}}</p>
           </div>
         </div>
       </div>
-      {% endif %}
       {% endfor %}
     </div>
   </div>

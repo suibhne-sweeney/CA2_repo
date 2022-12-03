@@ -40,8 +40,8 @@
     height: 40%;
   }
   .card_user{
-    height: 50vh;
-    width: 40%;
+    height: 80vh;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -66,7 +66,7 @@
     font-size: 16px;
   }
   .card_user input{
-    width: 80%;
+    width: 40%;
   }
   .card_user button{
     height: 30px;
@@ -76,6 +76,9 @@
     margin-right: auto;
     margin-bottom: 1em;
     border-style: none;
+  }
+  .card_user ul{
+    list-style: none;
   }
   .extendble {
     position: fixed;
@@ -194,7 +197,7 @@
   #slideshow_bg {
     width: 100%;
     height: 100%;
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     backface-visibility: hidden;
@@ -208,21 +211,21 @@
     font-weight: 800;
   }
 
-  @keyframes slideBg{
+@keyframes slideBg{
   0% {
     background-image: url(/static/images/Tokyo.jpg);
   }
   25% {
-    background-image: url(/static/images/lima_plaza.jpg)
+    background-image: url(/static/images/rio_bay.jpg)
   }
   50% {
-    background-image: url(/static/images/Berlin_Bridge.jpg)
+    background-image: url(/static/images/rome_bridge.jpg)
   }
   75% {
-    background-image: url(/static/images/Berlin_Plaza.jpg)
+    background-image: url(/static/images/Berlin_Arch.jpg)
   }
   100% {
-    background-image: url(/static/images/lima_moutain.jpg)
+    background-image: url(/static/images/singapore_waterfront.jpg)
   }
 }
   @media (width >= 500px) {

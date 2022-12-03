@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="{% static 'CSS/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+<!--Main content of information-->
+{% block content %}
+<div id="slideshow_bg">
+<div class="mainContainer" style="margin-top: 60px;">
+  <div class="container-fluid">
+    <div class="row">
+    {% for object in objects %}
+      <div class="col-4 my-3">
+        <div class="card">
+          <div class="card-body">
+            <h2>{{object.country}}</h2>
+            <img class=" w-100" style="height: 6cm;" src="{{object.image.url}}">
+            <h2>{{object.city}}</h2>
+            <p>{{object.name}}</p>
+            <p>{{object.description}}</p>
+            {% if object.current_room_capacity %}
+            <p>Rooms in use: {{object.current_room_capacity}}</p>
+            {% endif %}
+            {% if object.star_rating %}
+            <p>Star rating: {{object.star_rating}}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+<!--End of the main content Div-->
+</div>
+</div>
+    <!--Links and icons-->
+    <footer>
+      <h1>suggestions for what to add</h1>
+      <p> just some text to see the sizing of the box</p>
+    </footer>
+  </body>
+  <script src="{% static 'JS/index.js' %}"></script>
+  {% endblock content %}
+</html>
