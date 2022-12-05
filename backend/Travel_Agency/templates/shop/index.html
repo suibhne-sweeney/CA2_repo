@@ -24,7 +24,7 @@
 </div>
 <div class="mainContainer">
   <div class="subHeading">
-    <div id="slideshow_bg">
+    <div id="slideshow_bg_subtitle">
       <h1 class="subtitle">Destinations</h1>
     </div>
   </div>
@@ -45,24 +45,22 @@
     </div>
   </div>
   <div class="subHeading">
-    <div id="slideshow_bg">
+    <div id="slideshow_bg_subtitle">
       <h1 class="subtitle">Tours</h1>
     </div>
   </div>
   <div class="container-fluid">
-    {% for package in packages %}
-      {% if package.category == "Tour" %}
+    {% for tour in tours %}
       <div class="col-4 my-3">
         <div class="card">
           <div class="card-body">
-            <h2>{{package.country}}</h2>
-            <img class=" w-100" style="height: 6cm;" src="{{package.image.url}}">
-            <h2>{{package.tour}}</h2>
-            <p>{{package.description}}</p>
+            <h2>{{tour.name}}</h2>
+            <a href="{% url 'store:tours' tour.pk %}"><img class=" w-100" style="height: 6cm;" src="{{tour.image.url}}"></a>
+            <h2>{{tour.tour}}</h2>
+            <p>{{tour.description}}</p>
           </div>
         </div>
       </div>
-      {% endif %}
       {% endfor %}
   </div>
 

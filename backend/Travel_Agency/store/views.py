@@ -5,23 +5,23 @@ from .models import Package, Hotel, Category, Tour, Destination
 from django.db.models import Q
 # Create your views here.
 
-class HomeListView(ListView):
-    model = Destination
-    template_name = "shop/index.html"
-    context_object_name = "destinations"
+def HomeList(request):
+    tours = Tour.objects.all()
+    destinations = Destination.objects.all()
+    context = {"tours": tours, "destinations": destinations}
+    return render(request, "shop/index.html", context)
 
-def ToursList(request, pk):
+def ToursAndHotelsList(request, pk):
     related_tours = []
     destination = Destination.objects.get(pk=pk)
     place = destination.city
-    print(place)
     tours = Tour.objects.all()
     for tour in tours:
         if tour.city == place:
             related_tours.append(tour)
 
     context = {"tours": related_tours}
-    return render(request, "shop/details.html", context)
+    return render(request, "shop/hotels_tours.html", context)
 
 
 class SearchResultsListView(ListView):
@@ -42,3 +42,6 @@ class SearchResultsListView(ListView):
             lst.append(tour)
         return lst
 
+class TourDetailView(DetailView):
+    model = Tour
+    template_name = "shop/tour_detail.html"

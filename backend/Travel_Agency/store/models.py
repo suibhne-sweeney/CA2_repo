@@ -14,7 +14,7 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse("details.html", args=[str(self.id)])
-    
+
     class Meta:
         ordering = ["name"]
         verbose_name = "category"
@@ -33,7 +33,7 @@ class Tour(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse("details.html", args=[str(self.id)])
+        return reverse("tours", args=[str(self.id)])
 
 
 class Hotel(models.Model):
@@ -46,7 +46,7 @@ class Hotel(models.Model):
     max_room_capacity = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)
     current_room_capacity = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)
     star_rating = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)
-    
+
     def __str__(self):
         return self.name
 
@@ -61,10 +61,10 @@ class Destination(models.Model):
     city = models.CharField(max_length=100, blank=True, null=True)
     description = models.TextField()
     image = models.ImageField(upload_to="locations")
-    
+
     def __str__(self):
         return self.country
-    
+
     def get_absolute_url(self):
         return reverse("details.html", args=[str(self.id)])
 
@@ -80,7 +80,7 @@ class Package(models.Model):
 
     class Meta:
         ordering = ["destination"]
-        
+      
     def __str__(self):
         return self.country
     
