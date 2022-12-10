@@ -10,24 +10,15 @@
   <link href="/Css/style2.css" rel="stylesheet" />
 </head>
 <body>
-  <div id="sidebar" class="bg-dark" style="z-index: 1;">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="login.html"><i class="bi bi-person"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">at least the nav bar is done so just did the side bar real quick</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">style it how you want go nuts</a>
-      </li>
-    </ul>
-  </div>
+
 <!--Nav search function-->
 <nav class="navbar navbar-expand-sm bg-white navbar-white" style="z-index: 2;">
   <div class="search"><!--Siv's search feature-->
     <input placeholder="Search"/> <!--Find valid name for this-->
     <i class="bi bi-search" style="position:relative ; left:-7.1cm; cursor: pointer;"></i>
+    
+    <a href="login.html"><i class="bi bi-person-circle"></i></a>
+    <a href="cart.html"><i class="bi bi-cart"></i></a>
   </div>
 <!--Nav Links-->
   <div class="container-fluid">
@@ -40,25 +31,32 @@
           <a class="nav-link" href="tour_list_hub.html">Tours</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About us</a>
+          <a class="nav-link" href="about_us.html">About us</a>
         </li>
 		  </ul>
 		</div>
-    <button onclick="ExpandMenu()" class="extendble"><i class="bi bi-list"></i></button><!--On click will expand the nav bar in social media-->
 </nav>
-<div id="containerslide">
-  <div id="slideshow">
-      <img src="/images/Tokyo.jpg" alt="">
-      <img src="/images/Berlin.jpg" alt="">
-      <img src="/images/Venice.jpg" alt="" >
-  </div>
-</div>
-<div class="mainContainer">
+<div id="slideshow_bg">
+    <div class="container-fluid">
+      <div class="colum">
+        <div class="col-4">
+          <div class="card">
+        <div class="card-body ">
+          <img class="profile w-100" src="/images/9iVMhXPZ_400x400.jpg">
+          <p style="text-align: center;">Siv</p>
+        </div>
+          </div>
+      </div>
+          <div class="col-4">
+              <div class="card mt-3">
+            <div class="card-body">
+              <img class="profile w-100" src="/images/pfp.jpg" style="border: radius 0.2em;;">
+              <p style="text-align: center;">Jake</p>
+            </div>
+              </div>
+          </div>
 
 </div>
-<footer>
-    <h1>suggestions for what to add</h1>
-    <p> just some text to see the sizing of the box</p>
-  </footer>
+
 <script src="/js/index.js"></script>
 </body>
