@@ -1,0 +1,36 @@
+<div>
+    <div class="my_custom_menu">
+        <ul>
+            <li>
+                <a href="{% url 'filter_search' %}">Advance Search</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>Welcome, <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }} <i class="bi bi-person-circle"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    {% if user.profile %}
+                    <a href="{% url 'order:order_history' %}" class="dropdown-item">Order History</a>
+                    <a href="{% url 'profile' user.profile.pk %}" class="dropdown-item">View Profile</a>
+                    <a href="{% url 'update_profile' user.profile.pk %}" class="dropdown-item">Edit Profile</a>
+                    <a href="{% url 'password_change'%}" class="dropdown-item">Change Password</a>
+                    {% else %}
+                    <a href="{% url 'order:order_history' %}" class="dropdown-item">Order History</a>
+                    <a href="{% url 'password_change'%}" class="dropdown-item">Change Password</a>
+                    {% endif %}
+                </div>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">Sign Out <i class="fas fa-sign-out-alt"></i></a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'signup' %}">Sign Up <i class="fas fa-user-plus"></i></a>
+            </li>
+            <li>
+                <a href="{% url 'login' %}">Sign In <i class="fas fa-sign-in-alt"></i></a>
+            </li>
+            {% endif %}
+        </ul>
+        
+    </div>
+    
+</div>
