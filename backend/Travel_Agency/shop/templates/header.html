@@ -1,0 +1,37 @@
+{% load static %}
+<header>
+ <div style="text-align: center;">
+    <div id="containerslide">
+        <h1>Ready To Travel?</h1>
+        <div id="slideshow">
+            <img src="{% static 'images/Tokyo.jpg' %}" alt="">
+            <img src="{% static 'images/Berlin.jpg' %}" alt="">
+            <img src="{% static 'images/Venice.jpg' %}" alt="" >
+        </div>
+      </div>
+ </div>
+ <script>
+    var slider = document.getElementById("slideshow");
+    var count = 0;
+    setInterval(function(){
+ 
+        if(count === 0 ){
+            console.log(count)
+            slider.style.transform = "translateX(0)";
+            count++
+        }else if(count === 1){
+            console.log(count)
+            slider.style.transform = "translateX(-51cm)";
+            count++
+        }else if(count === 2){
+            console.log(count)
+            slider.style.transform = "translateX(-110cm)";
+            count++
+        }else if(count === 3){
+            console.log(count)
+            slider.style.transform = "translateX(-51cm)";
+            count = 0
+        }
+    }, 20000)
+ </script>
+</header>
