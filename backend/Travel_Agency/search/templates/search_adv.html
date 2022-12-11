@@ -56,11 +56,21 @@
       </form>
 
       <hr />
-    <div class="row">
-        <ul>
-
-        </ul>
-    </div> 
+      <div class="container-fluid">
+        <div class="row">
+          {% for product in queryset %}
+          <div class="col-3 my-3">
+            <div class="card" style="height: 6cm;">
+              <div class="card-body">
+                <a href="{{product.get_absolute_url}}"><img class=" w-100" style="height: 4cm;" src="{{product.image.url}}"></a>
+                <p style="color:rgb(58, 58, 58);">{{product.name}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
 
     </main>
 

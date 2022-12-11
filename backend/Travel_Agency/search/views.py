@@ -13,7 +13,6 @@ def filterView(request):
 
     if title_contains_query != "" and title_contains_query is not None:
         qs = qs.filter(Q(name__icontains=title_contains_query))
-        print(qs)
 
     elif id_exact_query != "" and id_exact_query is not None:
         qs = qs.filter(Q(id=id_exact_query))
@@ -22,9 +21,9 @@ def filterView(request):
         qs = qs.filter(Q(star_rating__icontains=star_rating_query))
     
     elif category_query != "" and category_query is not None:
-        qs = qs.filter(Q(category__icontains=category_query))
+        qs = qs.filter(Q(category__name=category_query))
 
-
+    print(qs)
     context = {
         "queryset": qs,
         "categories": categories

@@ -4,14 +4,14 @@
 {% if category %}
 {{ category.description|truncatewords:155 }}
 {% else %}
-Welcome to the cushion store where you can buy comfy and awesome cushions.
+Welcome to our Travel Agency Website.
 {% endif %}
 {% endblock %}
 {% block title %}
 {% if category %}
-{{ category.name }} - Perfect Cushion Store
+{{ category.name }} - Travel Agency
 {% else %}
-See Our Cushion Collection - Perfect Cushion Store
+Home
 {% endif %}
 {% endblock %}
 {% block content %}
@@ -45,7 +45,7 @@ See Our Cushion Collection - Perfect Cushion Store
                 <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
                     <div class="card text-center" style="min-width:18rem; color:black">
                         <h3>{{product.category}}</h3>
-                        <a class ="img" href="{{product.get_absolute_url}}"><img style="height: 280px; width: 380px;" class="card-img-topmy_image"src="{{product.image.url}}" alt="{{products.name}}"></a>
+                        <a class ="img" href="{{product.get_absolute_url}}"><img style="height: 280px; width: 380px;" class="card-img-topmy_image" src="{{product.image.url}}" alt="{{products.name}}"></a>
                         <div class="card-body">
                             <h4>{{product.name}}</h4>
                             <p>€{{product.price}}</p>

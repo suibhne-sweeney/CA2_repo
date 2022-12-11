@@ -36,12 +36,13 @@
 <br>
 {% if related%}
 <h1 style="text-align:center ;">Related Items</h1>
+<hr>
 {% else %}
 {%endif%}
 <div class="container-fluid">
     <div class="row">
       {% for product in related %}
-      <div class="col-3 my-3">
+      <div class="col-2 my-3">
         <div class="card" style="height: 6cm;">
           <div class="card-body">
             <a href="{{product.get_absolute_url}}"><img class=" w-100" style="height: 4cm;" src="{{product.image.url}}"></a>
