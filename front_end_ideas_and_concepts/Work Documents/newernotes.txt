@@ -1,0 +1,38 @@
+jakes stuff
+- landing page: needs to look more inline for what we did with the index page
+- index page: needs to be genraly fixed
+- login page
+- sign up page
+- destination details
+- tours detail
+- tours list * cities
+- about us page: side bar 
+- contact us page: must include web map and the link to the contact us page must be in the side bar
+- cart page: must have same
+
+jakes dumb fuck city pics
+8 cities * 1
+tours_list.html will have 4-6 options
+tours_detail only needs one desgin 
+
+sivs stuff
+- account page: DONT TOUCH
+- make a base page: for speed sake
+- checkout page API
+- install crispyforms
+- destination form dest index page when clicked they bring you to there form page
+- commet on code like a mad man for jake cuz he is dumb
+
+
+things we need badly
+
+cart.html
+about_us.html 
+destinations detail view
+manager backend
+user backend
+toures detail view
+
+
+some other stuff just in general
+- clean up the repo a.k. put jakes house of fun files in a folder
